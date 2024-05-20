@@ -56,26 +56,23 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="container">
+        <div>
         <div class="row">
-            <div class="col-md-6 col-lg-6" style="position: absolute; bottom: 10px;">
+            <div class="col col-lg-8 p-3">
                 <!-- To Do Form -->
-                <h3 class="pt-0 text-center">Add Student</h3>
-                
                 <form action="{% url 'addTask' %}" method="POST" >
                     {% csrf_token %}
-                    
-                    <div class="form-group">
+                    <div class="text-center form-group mt-4 ml-2">
+                        <h3 class="pt-5 text-center">Add Student</h3>
                         <span style="display: flex;">
                             <input type="text" name="task" class="form-control" placeholder="Add a Fee Unpaid Student">
                             <button type="submit" class="btn btn-outline-primary" style="width: 200px"><i class="fa fa-plus"></i> Add Student</button>
                         </span>
                     </div>
-                    
                 </form>
-            </div>
-            </div>
         </div>
     </div>
+    
+</div>
 </body>
 </html>
